@@ -36,9 +36,12 @@
                     </a>
                 </div>
                 <div>
-                    <a href="#" class="bg-slate-800 text-xs text-white font-bold px-3 py-1 rounded inline-flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
-                    </a>
+                   <form method="post" action="/logout">
+                    @csrf
+                        <button class="cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+                        </button>
+                   </form>
                 </div>
             </nav>
         <div>
@@ -70,8 +73,119 @@
         <div class="flex-1">
             <div class="bg-gray-100 p-4">
                {{-- Développé le file d'Ariane --}}
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sed exercitationem minima corrupti cumque odit minus repudiandae dicta repellendus neque voluptates ullam ad velit, quae quibusdam quidem assumenda animi illum.</p>
+            </div>
+
+            <div class="p-4">
+                <h2 class="font-black text-2xl">Leads</h2>
+
+             <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-slate-50 rounded-lg mt-5">
+                <table class="w-full text-left table-auto min-w-max text-slate-800">
+                    <thead>
+                    <tr class="text-white border-b border-slate-300 bg-teal-400">
+                        <th class="p-4">
+                        <p class="text-sm leading-none font-normal">
+                            Contact Name
+                        </p>
+                        </th>
+                        <th class="p-4">
+                        <p class="text-sm leading-none font-normal">
+                            Start Date
+                        </p>
+                        </th>
+                        <th class="p-4">
+                        <p class="text-sm leading-none font-normal">
+                            End Date
+                        </p>
+                        </th>
+                        <th class="p-4">
+                        <p class="text-sm leading-none font-normal">
+                            Owner
+                        </p>
+                        </th>
+                        <th class="p-4">
+                        <p class="text-sm leading-none font-normal">
+                            Budget
+                        </p>
+                        </th>
+                        <th class="p-4">
+                        <p></p>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-4">
+                        <p class="text-sm font-bold">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe" alt="avatar" class="rounded-full w-10">
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            01/01/2024
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            30/06/2024
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            John Michael
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            $50,000
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <a href="#" class="text-sm font-semibold ">
+                            Edit
+                        </a>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="p-4">
+                        <p class="text-sm font-bold">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe" alt="avatar" class="rounded-full w-10">
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            15/02/2024
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            15/08/2024
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            Alexa Liras
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <p class="text-sm">
+                            $75,000
+                        </p>
+                        </td>
+                        <td class="p-4">
+                        <a href="#" class="text-sm font-semibold ">
+                            Edit
+                        </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
             </div>
         </div>
+
+
     </main>
 
     <footer class="flex justify-center">
